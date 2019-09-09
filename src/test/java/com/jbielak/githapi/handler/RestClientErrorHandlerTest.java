@@ -3,7 +3,6 @@ package com.jbielak.githapi.handler;
 import com.jbielak.githapi.exception.NotFoundException;
 import com.jbielak.githapi.exception.ServerException;
 import com.jbielak.githapi.repository.model.Repository;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

@@ -1,9 +1,10 @@
 package com.jbielak.githapi.repository.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.io.Serializable;
 import java.time.ZonedDateTime;
 
-public class Repository {
+public class Repository implements Serializable {
 
     private String fullName;
 
