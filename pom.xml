@@ -16,6 +16,7 @@
 
     <properties>
         <java.version>11</java.version>
+        <junit-jupiter-api.version>5.2.0</junit-jupiter-api.version>
     </properties>
 
     <dependencies>
@@ -33,6 +34,13 @@
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit-jupiter.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

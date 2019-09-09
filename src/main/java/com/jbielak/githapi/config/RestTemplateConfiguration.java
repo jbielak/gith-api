@@ -1,5 +1,6 @@
 package com.jbielak.githapi.config;
 
+import com.jbielak.githapi.handler.RestClientErrorHandler;
 import com.jbielak.githapi.interceptor.RestClientHttpRequestInterceptor;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,7 @@ public class RestTemplateConfiguration {
     public RestTemplate restTemplate() {
         return new RestTemplateBuilder()
                 .requestFactory(this::clientHttpRequestFactory)
+                .errorHandler(new RestClientErrorHandler())
                 .interceptors(new RestClientHttpRequestInterceptor())
                 .build();
     }
