@@ -12,7 +12,11 @@ import org.springframework.web.client.RestTemplate;
 @Component
 public class RepositoryRestTemplateApiClient implements RepositoryApiClient {
 
-    private RestTemplate restTemplate = new RestTemplate();
+    private final RestTemplate restTemplate;
+
+    public RepositoryRestTemplateApiClient(RestTemplate restTemplate) {
+        this.restTemplate = restTemplate;
+    }
 
     @Value("${api.github.repositories_uri}")
     private String repositoriesUri;
